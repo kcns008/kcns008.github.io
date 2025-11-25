@@ -27,11 +27,10 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content fade-in">
-                <h1 class="glitch" data-text="Cloud & Kubernetes Architect">Cloud & Kubernetes Architect</h1>
-                <p class="subtitle">OpenShift • AI/ML Infrastructure • DevOps Excellence</p>
+                <h1 class="glitch" data-text="Infrastructure Automation Engineer">Infrastructure Automation Engineer</h1>
+                <p class="subtitle">GPU • Kubernetes • OpenShift • vLLM</p>
                 <div class="hero-description">
-                    <p>I'm passionate about helping companies host their own inference services and believe this is crucial for product and service survival in today's landscape.</p>
-                    <p>As part of my contribution to the community, I'm building tools for Kubernetes cluster management and AI/ML deployment at scale.</p>
+                    <p>Specializing in high-performance infrastructure automation for AI/ML workloads. Expert in orchestrating GPU resources, managing large-scale Kubernetes/OpenShift clusters, and deploying production-grade vLLM inference services.</p>
                 </div>
                 <div class="cta-buttons">
                     <a href="#opensource" class="btn btn-primary">View Projects</a>
@@ -43,6 +42,51 @@
             <div class="cube"></div>
             <div class="cube"></div>
             <div class="cube"></div>
+        </div>
+    </section>
+
+    </section>
+
+    <!-- Architecture Diagram Section -->
+    <section id="architecture" class="architecture-section">
+        <div class="container">
+            <h2 class="section-title slide-in">ML Inference Architecture</h2>
+            <div class="diagram-container fade-in">
+                <div class="flow-step">
+                    <div class="node user">
+                        <div class="icon">👤</div>
+                        <span>User Request</span>
+                    </div>
+                    <div class="arrow">➜</div>
+                </div>
+                
+                <div class="flow-step">
+                    <div class="node ingress">
+                        <div class="icon">🌐</div>
+                        <span>K8s Ingress</span>
+                        <small>Nginx / Istio</small>
+                    </div>
+                    <div class="arrow">➜</div>
+                </div>
+
+                <div class="cluster-box">
+                    <div class="cluster-label">Kubernetes / OpenShift Cluster</div>
+                    <div class="flow-step">
+                        <div class="node service">
+                            <div class="icon">⚙️</div>
+                            <span>Inference Service</span>
+                            <small>vLLM / KServe</small>
+                        </div>
+                        <div class="arrow">➜</div>
+                        <div class="node gpu">
+                            <div class="icon">🚀</div>
+                            <span>GPU Node</span>
+                            <small>NVIDIA A100/H100</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="diagram-caption">High-performance ML Inference Pipeline managed via Infrastructure as Code</p>
         </div>
     </section>
 
