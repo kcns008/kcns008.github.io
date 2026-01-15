@@ -9,7 +9,41 @@
 </head>
 
 <body>
-    <div class="cursor-follower"></div>
+    <!-- Tech Logo Background -->
+    <div class="tech-bg-logos">
+        <!-- Kubernetes -->
+        <svg class="tech-logo" style="top: 5%; left: 8%;" viewBox="0 0 32 32"><path fill="currentColor" d="M15.9.476a2.14 2.14 0 0 0-.823.218L3.932 6.01a2.16 2.16 0 0 0-1.139 1.39l-2.77 11.998a2.14 2.14 0 0 0 .287 1.596l7.453 9.86a2.16 2.16 0 0 0 1.711.907h11.052a2.16 2.16 0 0 0 1.71-.907l7.454-9.86a2.14 2.14 0 0 0 .287-1.596L27.208 7.4a2.16 2.16 0 0 0-1.139-1.39L14.924.694a2.14 2.14 0 0 0-.823-.218z"/></svg>
+        <!-- OpenShift -->
+        <svg class="tech-logo" style="top: 12%; right: 15%;" viewBox="0 0 32 32"><path fill="currentColor" d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0zm0 28C9.4 28 4 22.6 4 16S9.4 4 16 4s12 5.4 12 12-5.4 12-12 12z"/></svg>
+        <!-- Azure -->
+        <svg class="tech-logo" style="top: 25%; left: 3%;" viewBox="0 0 32 32"><path fill="currentColor" d="M17.462 0L8.338 8.89.135 24.257h7.476zM18.753 2.235L14.5 10.53l5.14 6.2-10.587 11.938h21.8z"/></svg>
+        <!-- Docker/Container -->
+        <svg class="tech-logo" style="top: 35%; right: 5%;" viewBox="0 0 32 32"><path fill="currentColor" d="M18 8h3v3h-3zM14 8h3v3h-3zM10 8h3v3h-3zM14 4h3v3h-3zM6 8h3v3H6zM10 12h3v3h-3zM6 12h3v3H6zM14 12h3v3h-3zM32 13.5c-.6-.4-2-1.1-3.7-.9-.2-1.5-1.2-2.8-2.3-3.6l-.5-.3-.3.5c-.4.6-.6 1.4-.7 2.1-.1 1.3.2 2.5.9 3.5-.4.2-.9.4-1.3.5-1 .3-2 .4-3 .4H.2l-.1.6c-.1 1.3.1 2.6.4 3.8.5 1.6 1.3 2.9 2.4 3.9 1.3 1.2 3 1.9 5 2.2 1 .2 2 .3 3 .3 1.6 0 3.1-.2 4.6-.7 1.2-.4 2.4-1 3.4-1.8 1.4-1 2.5-2.3 3.4-3.9.9.1 2.8.1 3.8-1.8l.2-.4-.4-.2c-.6-.3-1.5-.5-2.5-.5-.8 0-1.5.1-2.2.3.1-.4.1-.9.1-1.4-.1-.7-.3-1.3-.7-1.9z"/></svg>
+        <!-- ArgoCD/GitOps -->
+        <svg class="tech-logo" style="top: 50%; left: 12%;" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="2"/><path fill="currentColor" d="M16 6l6 10h-4v10h-4V16H10z"/></svg>
+        <!-- Ansible -->
+        <svg class="tech-logo" style="top: 60%; right: 12%;" viewBox="0 0 32 32"><path fill="currentColor" d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0zm4.9 23.5l-7.6-5.8 3.4-1.6 4.2 7.4zm-4.5-4.3l-5.8 2.7 5.8-9.7v7zm-.4-11.1c.7 0 1.3.6 1.3 1.3s-.6 1.3-1.3 1.3-1.3-.6-1.3-1.3.6-1.3 1.3-1.3z"/></svg>
+        <!-- Database (Crunchy) -->
+        <svg class="tech-logo" style="top: 75%; left: 6%;" viewBox="0 0 32 32"><ellipse cx="16" cy="8" rx="12" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M4 8v8c0 2.8 5.4 5 12 5s12-2.2 12-5V8M4 16v8c0 2.8 5.4 5 12 5s12-2.2 12-5v-8"/></svg>
+        <!-- JFrog/Package -->
+        <svg class="tech-logo" style="top: 85%; right: 8%;" viewBox="0 0 32 32"><path fill="currentColor" d="M16 2L2 9v14l14 7 14-7V9L16 2zm0 3l10 5-10 5-10-5 10-5zM4 11.5l10 5v9l-10-5v-9zm24 0v9l-10 5v-9l10-5z"/></svg>
+        <!-- GitLab -->
+        <svg class="tech-logo" style="top: 18%; left: 50%;" viewBox="0 0 32 32"><path fill="currentColor" d="M16 28.8L21.5 13H10.5L16 28.8zM4.2 13l-2.5 7.7c-.2.7 0 1.4.5 1.8L16 28.8 4.2 13zM4.2 13h6.3L7.5 4.5c-.2-.6-1-.6-1.2 0L4.2 13zM27.8 13l2.5 7.7c.2.7 0 1.4-.5 1.8L16 28.8 27.8 13zM27.8 13h-6.3l3-8.5c.2-.6 1-.6 1.2 0l2.1 8.5z"/></svg>
+        <!-- AKS/Cloud -->
+        <svg class="tech-logo" style="top: 42%; left: 85%;" viewBox="0 0 32 32"><path fill="currentColor" d="M26 16c0-3.3-2.7-6-6-6-.7-3.4-3.7-6-7.4-6-4.1 0-7.5 3.3-7.6 7.4C2.2 12.2 0 15 0 18.3 0 22 3 25 6.8 25H25c2.8 0 5-2.2 5-5 0-2.3-1.6-4.3-4-4.8z"/></svg>
+        <!-- Terraform/IaC -->
+        <svg class="tech-logo" style="top: 68%; left: 45%;" viewBox="0 0 32 32"><path fill="currentColor" d="M11 2v9l8 4.5v-9L11 2zM21 7.5v9l8-4.5v-9l-8 4.5zM2 7.5v9l8 4.5v-9L2 7.5zM11 21v9l8-4.5v-9l-8 4.5z"/></svg>
+        <!-- Portworx/Storage -->
+        <svg class="tech-logo" style="top: 8%; left: 75%;" viewBox="0 0 32 32"><rect x="4" y="4" width="24" height="24" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><line x1="4" y1="12" x2="28" y2="12" stroke="currentColor" stroke-width="2"/><line x1="4" y1="20" x2="28" y2="20" stroke="currentColor" stroke-width="2"/><circle cx="8" cy="8" r="1.5" fill="currentColor"/><circle cx="8" cy="16" r="1.5" fill="currentColor"/><circle cx="8" cy="24" r="1.5" fill="currentColor"/></svg>
+        <!-- NVIDIA/GPU -->
+        <svg class="tech-logo" style="top: 55%; left: 70%;" viewBox="0 0 32 32"><path fill="currentColor" d="M12.3 8v1.1c-4.3.5-7.7 4.3-7.7 8.9s3.4 8.4 7.7 8.9V28c-5.2-.5-9.3-5-9.3-10.5S7.1 8.5 12.3 8zm2 0c5.2.5 9.3 5 9.3 10.5s-4.1 10-9.3 10.5V18h7.3v-4h-7.3V8z"/></svg>
+        <!-- Prometheus -->
+        <svg class="tech-logo" style="top: 30%; left: 35%;" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="2"/><path fill="currentColor" d="M16 6v10l7 7"/></svg>
+        <!-- Grafana -->
+        <svg class="tech-logo" style="top: 78%; left: 28%;" viewBox="0 0 32 32"><path fill="currentColor" d="M16 4c-6.6 0-12 5.4-12 12s5.4 12 12 12 12-5.4 12-12S22.6 4 16 4zm0 20c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"/><circle cx="16" cy="16" r="4" fill="currentColor"/></svg>
+        <!-- Red Hat -->
+        <svg class="tech-logo" style="top: 92%; left: 55%;" viewBox="0 0 32 32"><path fill="currentColor" d="M16 2C8.3 2 2 8.3 2 16s6.3 14 14 14 14-6.3 14-14S23.7 2 16 2zm0 24c-5.5 0-10-4.5-10-10S10.5 6 16 6s10 4.5 10 10-4.5 10-10 10z"/></svg>
+    </div>
 
     <!-- Navigation -->
     <nav class="navbar">
@@ -28,8 +62,8 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
-            <div class="hero-content fade-in">
-                <h1 class="glitch" data-text="Infrastructure Automation Engineer">Infrastructure Engineer</h1>
+            <div class="hero-content">
+                <h1>Infrastructure Engineer</h1>
                 <p class="subtitle">Kubernetes • OpenShift • vLLM • GPU • AI Agent • Automation</p>
                 <div class="hero-description">
                     <p>Specializing in high-performance infrastructure automation for AI/ML workloads. Expert in
@@ -42,11 +76,6 @@
                 </div>
             </div>
         </div>
-        <div class="hero-bg-animation">
-            <div class="cube"></div>
-            <div class="cube"></div>
-            <div class="cube"></div>
-        </div>
     </section>
 
     </section>
@@ -56,7 +85,7 @@
     <!-- Open Source Projects -->
     <section id="opensource" class="opensource-section">
         <div class="container">
-            <h2 class="section-title slide-in">Open Source Contributions</h2>
+            <h2 class="section-title">Open Source Contributions</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-icon">
@@ -309,8 +338,8 @@
     <!-- Architecture Diagram Section -->
     <section id="architecture" class="architecture-section">
         <div class="container">
-            <h2 class="section-title slide-in">ML Inference Architecture</h2>
-            <div class="diagram-container fade-in">
+            <h2 class="section-title">ML Inference Architecture</h2>
+            <div class="diagram-container">
                 <div class="flow-step">
                     <div class="node user">
                         <div class="icon">👤</div>
