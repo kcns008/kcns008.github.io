@@ -1,83 +1,65 @@
-// Smooth scroll for navigation links
+// Nav scroll effect
+const nav = document.getElementById('nav');
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+
+window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+});
+
+// Mobile menu
+navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+});
+
+// Close mobile menu on link click
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navLinks.classList.remove('open'));
+});
+
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     });
 });
 
-// Navbar background on scroll
-const navbar = document.querySelector('.navbar');
+// Scroll reveal
+const revealEls = document.querySelectorAll('.section-header, .role-card, .os-card, .skill-block, .tl-item, .proj-card, .edu-card, .contact-inner');
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
+revealEls.forEach(el => el.classList.add('reveal'));
 
-    if (currentScroll > 50) {
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.08)';
-    } else {
-        navbar.style.boxShadow = 'none';
-    }
-});
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-// Add active state to navigation
+revealEls.forEach(el => observer.observe(el));
+
+// Active nav link on scroll
 const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-menu a');
+const allNavLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
 
 window.addEventListener('scroll', () => {
     let current = '';
-
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute('id');
-        }
+        const top = section.offsetTop - 120;
+        if (window.scrollY >= top) current = section.getAttribute('id');
     });
-
-    navLinks.forEach(link => {
-        link.style.color = '';
-        if (link.getAttribute('href').slice(1) === current) {
-            link.style.color = '#0369a1';
-        }
+    allNavLinks.forEach(link => {
+        link.style.color = link.getAttribute('href').slice(1) === current ? 'var(--text)' : '';
     });
 });
 
-// Mobile menu toggle
-const createMobileMenu = () => {
-    const existingToggle = document.querySelector('.menu-toggle');
-    if (existingToggle) {
-        existingToggle.remove();
-    }
-    
-    if (window.innerWidth <= 480) {
-        const navMenu = document.querySelector('.nav-menu');
-        const navBrand = document.querySelector('.nav-brand');
-
-        const menuToggle = document.createElement('div');
-        menuToggle.className = 'menu-toggle';
-        menuToggle.innerHTML = '☰';
-        menuToggle.style.cssText = `
-            cursor: pointer;
-            font-size: 1.5rem;
-            display: block;
-            color: #1e293b;
-        `;
-
-        navBrand.parentNode.insertBefore(menuToggle, navMenu);
-
-        menuToggle.addEventListener('click', () => {
-            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
-        });
-    }
-};
-
-window.addEventListener('resize', createMobileMenu);
-window.addEventListener('load', createMobileMenu);
-
-console.log('%c👋 Welcome to my portfolio!', 'font-size: 16px; color: #0369a1; font-weight: bold;');
-console.log('%cInterested in the code? Check out my GitHub: https://github.com/kcns008', 'font-size: 12px; color: #475569;');
+// Console easter egg
+console.log('%c⚡ Chin K', 'font-size: 18px; font-weight: bold; color: #7c5cff;');
+console.log('%cInfrastructure & AI/ML Engineer', 'font-size: 13px; color: #9a9a9f;');
+console.log('%c→ https://github.com/kcns008', 'font-size: 12px; color: #5a5a60;');
